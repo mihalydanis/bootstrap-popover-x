@@ -169,15 +169,6 @@
                 });
             }
             $dialog.on('click.dismiss' + $h.NAMESPACE, '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
-
-            $(window).resize(function () {
-                if ($dialog.hasClass('kv-popover-active')) {
-                    self.hide();
-                    setTimeout(function () {
-                        self.show(true);
-                    }, 50);
-                }
-            });
         },
         getPlacement: function () {
             var self = this, pos = self.getPosition(), placement = self.options.placement,
